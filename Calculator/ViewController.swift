@@ -11,50 +11,49 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var valueLabel: UILabel!
+    private var previousValue: Int?
+    private var previousArith: String?
+    private var shouldClearDisplay: Bool = false
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    private var arrayOfVals: [String] = []
-    
     @IBAction func numOrArithTapped(_ sender: Any) {
         let buttonText = (sender as! UIButton).titleLabel!.text!
         if let int = Int(buttonText) {
-            if valueLabel.text! == "0" || previousValue != nil {
+            if valueLabel.text! == "0" || shouldClearDisplay {
                 valueLabel.text! = ""
+                shouldClearDisplay = false
             }
             valueLabel.text! += "\(int)"
-        }else {
+        }else if previousArith != buttonText {
             arithTapped(buttonText)
         }
-        
     }
     
-    var previousValue: Int?
-    var previousArith: String?
+    private func arithTapped(_ char: String) {
+        performArith(char)
+    }
     
-    func arithTapped(_ char: String) {
-        
+    private func performArith(_ prevArith: String? = nil) {
         if previousValue != nil && previousArith != nil {
-           valueLabel.text =  performArith(forChar: previousArith!, val1: previousValue!, val2: Int(valueLabel.text!)!)
-            
+            valueLabel.text =  performArith(forChar: previousArith!, val1: previousValue!, val2: Int(valueLabel.text!)!)
         }
-        
         previousValue = Int(valueLabel.text!)
-        previousArith = char
+        shouldClearDisplay = true
+        previousArith = prevArith
     }
     
     @IBAction func clearTapped(_ sender: Any) {
         valueLabel.text! = "0"
         previousValue = nil
+        previousArith = nil
     }
     
     @IBAction func equalsTapped(_ sender: Any) {
-        
+        performArith(nil)
     }
-    
-
     
     private func performArith(forChar char: String, val1: Int, val2: Int) -> String {
         
@@ -80,7 +79,6 @@ class ViewController: UIViewController {
     }
     
 }
-
 
 fileprivate extension String {
     func isArith() -> Bool {
