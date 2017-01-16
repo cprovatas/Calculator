@@ -21,57 +21,40 @@ class ViewController: UIViewController {
     @IBAction func numOrArithTapped(_ sender: Any) {
         let buttonText = (sender as! UIButton).titleLabel!.text!
         if let int = Int(buttonText) {
-            if valueLabel.text! == "0" {
+            if valueLabel.text! == "0" || previousValue != nil {
                 valueLabel.text! = ""
             }
             valueLabel.text! += "\(int)"
+        }else {
+            arithTapped(buttonText)
         }
         
-        arrayOfVals.append(buttonText)
-        calculateVals()
+    }
+    
+    var previousValue: Int?
+    var previousArith: String?
+    
+    func arithTapped(_ char: String) {
+        
+        if previousValue != nil && previousArith != nil {
+           valueLabel.text =  performArith(forChar: previousArith!, val1: previousValue!, val2: Int(valueLabel.text!)!)
+            
+        }
+        
+        previousValue = Int(valueLabel.text!)
+        previousArith = char
     }
     
     @IBAction func clearTapped(_ sender: Any) {
         valueLabel.text! = "0"
-        arrayOfVals.removeAll()
+        previousValue = nil
     }
     
     @IBAction func equalsTapped(_ sender: Any) {
-        arrayOfVals.append("+")
-        calculateVals()
-        arrayOfVals.removeAll()        
+        
     }
     
-    private func calculateVals() {
-        var previousString = ""
-        var previousValue = 0
-        var currentArith = ""
-        for val in arrayOfVals {
-            if let int = Int(val) {
-                previousString += val
-                if currentArith != "" {
-                    valueLabel.text! = previousString
-                }
-                
-            }else {
-                if currentArith != "" {
-                    if let num = Int(previousString) {
-                        let r = performArith(forChar: currentArith, val1: previousValue, val2: num)
-                        valueLabel.text! = r
-                        previousValue = Int(r)!
-                    }else {
-                        currentArith = val
-                    }
-                }else {
-                    if let num = Int(previousString) {
-                        previousValue = num
-                    }
-                }
-                previousString = ""
-                currentArith = val
-            }
-        }
-    }
+
     
     private func performArith(forChar char: String, val1: Int, val2: Int) -> String {
         
