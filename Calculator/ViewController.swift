@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     @IBAction func equalsTapped(_ sender: Any) {
         arrayOfVals.append("+")
         calculateVals()
-        arrayOfVals.removeLast()
+        arrayOfVals.removeAll()        
     }
     
     private func calculateVals() {
@@ -55,9 +55,13 @@ class ViewController: UIViewController {
                 
             }else {
                 if currentArith != "" {
-                    let r = performArith(forChar: currentArith, val1: previousValue, val2: Int(previousString)!)
-                    valueLabel.text! = r
-                    previousValue = Int(r)!
+                    if let num = Int(previousString) {
+                        let r = performArith(forChar: currentArith, val1: previousValue, val2: num)
+                        valueLabel.text! = r
+                        previousValue = Int(r)!
+                    }else {
+                        currentArith = val
+                    }
                 }else {
                     if let num = Int(previousString) {
                         previousValue = num
