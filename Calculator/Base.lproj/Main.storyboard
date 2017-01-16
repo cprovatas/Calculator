@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODu-qg-4t5">
+                                <rect key="frame" x="-0.5" y="20" width="375" height="66.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9t-79-n3F">
+                                <rect key="frame" x="-0.5" y="86" width="94" height="146.5"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1DL-bp-oeg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-8D-WMT">
+                                <rect key="frame" x="93" y="86" width="94" height="146.5"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAJ-ag-2Ky"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kae-pO-SmN">
+                                <rect key="frame" x="281" y="86" width="94" height="146.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ljm-m2-8is"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-cO-gt9">
+                                <rect key="frame" x="187" y="86" width="94" height="146.5"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0W0-wn-JIP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-ms-gcs">
+                                <rect key="frame" x="-1" y="232" width="94" height="147"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="93s-g0-4rl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQB-Ry-e8D">
+                                <rect key="frame" x="93" y="232" width="94" height="147"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gPu-kJ-qNe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-MW-TBf">
+                                <rect key="frame" x="187" y="232" width="94" height="147"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkF-sY-nEP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-GK-doG">
+                                <rect key="frame" x="281" y="232" width="94" height="147"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IKw-zx-t3i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAk-0k-8ma">
+                                <rect key="frame" x="-1" y="379" width="94" height="147"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1Q-ZO-zbC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL8-px-Rnc">
+                                <rect key="frame" x="93" y="378.5" width="94" height="147"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2k-ah-fGj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UK-Gh-Z0e">
+                                <rect key="frame" x="187" y="378.5" width="94" height="147"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aA-oi-2JW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9p-QF-37I">
+                                <rect key="frame" x="281" y="378.5" width="94" height="147"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDL-gn-62x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clv-Gs-WcF">
+                                <rect key="frame" x="-1" y="526.5" width="94" height="147.5"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GCn-Rk-pal"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOq-pN-ihh">
+                                <rect key="frame" x="281" y="525.5" width="94" height="147"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="equalsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iuw-Hf-orw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVc-xb-uia">
+                                <rect key="frame" x="187" y="525.5" width="94" height="147.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="/">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCR-BH-ZTR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkY-ta-GiN">
+                                <rect key="frame" x="93" y="525.5" width="94" height="147"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <state key="normal" title="*">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numOrArithTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRG-Vl-dJZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OOq-pN-ihh" firstAttribute="height" secondItem="Y9p-QF-37I" secondAttribute="height" id="2Ae-IB-KIm"/>
+                            <constraint firstItem="TLL-cO-gt9" firstAttribute="width" secondItem="2zU-8D-WMT" secondAttribute="width" id="2Xf-t9-Hb7"/>
+                            <constraint firstItem="TLL-cO-gt9" firstAttribute="height" secondItem="2zU-8D-WMT" secondAttribute="height" id="2bf-0I-q68"/>
+                            <constraint firstItem="OOq-pN-ihh" firstAttribute="width" secondItem="Y9p-QF-37I" secondAttribute="width" id="2hg-j3-39X"/>
+                            <constraint firstItem="TLL-cO-gt9" firstAttribute="leading" secondItem="2zU-8D-WMT" secondAttribute="trailing" id="37J-ke-7D9"/>
+                            <constraint firstItem="5UK-Gh-Z0e" firstAttribute="centerY" secondItem="zL8-px-Rnc" secondAttribute="centerY" id="3zh-w6-gBZ"/>
+                            <constraint firstItem="qAk-0k-8ma" firstAttribute="centerX" secondItem="6nW-ms-gcs" secondAttribute="centerX" id="46O-i6-kV1"/>
+                            <constraint firstItem="qAk-0k-8ma" firstAttribute="height" secondItem="6nW-ms-gcs" secondAttribute="height" id="6Xe-AC-1dk"/>
+                            <constraint firstItem="TkY-ta-GiN" firstAttribute="top" secondItem="zL8-px-Rnc" secondAttribute="bottom" id="6bG-yW-V6M"/>
+                            <constraint firstItem="Kae-pO-SmN" firstAttribute="width" secondItem="TLL-cO-gt9" secondAttribute="width" id="7yI-iC-grh"/>
+                            <constraint firstItem="9KC-MW-TBf" firstAttribute="height" secondItem="pQB-Ry-e8D" secondAttribute="height" id="859-WA-Cws"/>
+                            <constraint firstItem="Kae-pO-SmN" firstAttribute="centerY" secondItem="TLL-cO-gt9" secondAttribute="centerY" id="927-6e-Wl0"/>
+                            <constraint firstItem="9KC-MW-TBf" firstAttribute="leading" secondItem="pQB-Ry-e8D" secondAttribute="trailing" id="9Ft-12-Y9c"/>
+                            <constraint firstItem="mVc-xb-uia" firstAttribute="width" secondItem="5UK-Gh-Z0e" secondAttribute="width" id="BVo-cs-30n"/>
+                            <constraint firstItem="pQB-Ry-e8D" firstAttribute="width" secondItem="6nW-ms-gcs" secondAttribute="width" id="BzO-wg-j30"/>
+                            <constraint firstItem="Y9p-QF-37I" firstAttribute="centerY" secondItem="5UK-Gh-Z0e" secondAttribute="centerY" id="DBt-2D-dZD"/>
+                            <constraint firstItem="ODu-qg-4t5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DPt-Q7-4s4"/>
+                            <constraint firstItem="clv-Gs-WcF" firstAttribute="width" secondItem="qAk-0k-8ma" secondAttribute="width" id="Dhb-Y3-8Hp"/>
+                            <constraint firstItem="Y9p-QF-37I" firstAttribute="height" secondItem="5UK-Gh-Z0e" secondAttribute="height" id="Dy8-SR-cvY"/>
+                            <constraint firstItem="ODu-qg-4t5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="Efd-9F-ytC"/>
+                            <constraint firstItem="TLL-cO-gt9" firstAttribute="centerY" secondItem="2zU-8D-WMT" secondAttribute="centerY" id="Eow-r8-R8K"/>
+                            <constraint firstItem="pQB-Ry-e8D" firstAttribute="centerY" secondItem="6nW-ms-gcs" secondAttribute="centerY" id="Few-MF-teQ"/>
+                            <constraint firstItem="ao1-GK-doG" firstAttribute="width" secondItem="Kae-pO-SmN" secondAttribute="width" id="G0B-6n-RCD"/>
+                            <constraint firstItem="Kae-pO-SmN" firstAttribute="leading" secondItem="TLL-cO-gt9" secondAttribute="trailing" id="H6I-S5-cXy"/>
+                            <constraint firstItem="6nW-ms-gcs" firstAttribute="top" secondItem="J9t-79-n3F" secondAttribute="bottom" id="Heo-1e-pQg"/>
+                            <constraint firstItem="pQB-Ry-e8D" firstAttribute="leading" secondItem="6nW-ms-gcs" secondAttribute="trailing" id="JA4-Vs-Qg4"/>
+                            <constraint firstItem="ao1-GK-doG" firstAttribute="centerX" secondItem="Kae-pO-SmN" secondAttribute="centerX" id="Kgs-Ft-4uA"/>
+                            <constraint firstItem="9KC-MW-TBf" firstAttribute="centerY" secondItem="pQB-Ry-e8D" secondAttribute="centerY" id="KrN-Ci-9yY"/>
+                            <constraint firstItem="2zU-8D-WMT" firstAttribute="width" secondItem="J9t-79-n3F" secondAttribute="width" id="MkP-bi-VUN"/>
+                            <constraint firstItem="ao1-GK-doG" firstAttribute="top" secondItem="Kae-pO-SmN" secondAttribute="bottom" constant="-0.5" id="MnJ-rR-Nnm"/>
+                            <constraint firstItem="OOq-pN-ihh" firstAttribute="centerX" secondItem="Y9p-QF-37I" secondAttribute="centerX" id="NGg-pR-l02"/>
+                            <constraint firstItem="2zU-8D-WMT" firstAttribute="centerY" secondItem="J9t-79-n3F" secondAttribute="centerY" id="POA-eG-odl"/>
+                            <constraint firstItem="J9t-79-n3F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="Psf-LV-Prb"/>
+                            <constraint firstItem="clv-Gs-WcF" firstAttribute="top" secondItem="qAk-0k-8ma" secondAttribute="bottom" id="Rsl-8N-SEe"/>
+                            <constraint firstItem="clv-Gs-WcF" firstAttribute="height" secondItem="qAk-0k-8ma" secondAttribute="height" id="SDR-aC-GLP"/>
+                            <constraint firstItem="5UK-Gh-Z0e" firstAttribute="height" secondItem="zL8-px-Rnc" secondAttribute="height" id="SFC-dE-TKS"/>
+                            <constraint firstItem="Kae-pO-SmN" firstAttribute="height" secondItem="TLL-cO-gt9" secondAttribute="height" id="Ton-ij-Nc2"/>
+                            <constraint firstItem="TkY-ta-GiN" firstAttribute="height" secondItem="zL8-px-Rnc" secondAttribute="height" id="VnO-az-Ipo"/>
+                            <constraint firstItem="ao1-GK-doG" firstAttribute="height" secondItem="Kae-pO-SmN" secondAttribute="height" id="W0G-jr-kJB"/>
+                            <constraint firstItem="5UK-Gh-Z0e" firstAttribute="width" secondItem="zL8-px-Rnc" secondAttribute="width" id="WgC-OQ-7Z8"/>
+                            <constraint firstItem="J9t-79-n3F" firstAttribute="top" secondItem="ODu-qg-4t5" secondAttribute="bottom" id="ZeA-9B-pXB"/>
+                            <constraint firstItem="OOq-pN-ihh" firstAttribute="top" secondItem="Y9p-QF-37I" secondAttribute="bottom" id="aBw-Lg-J8Y"/>
+                            <constraint firstItem="mVc-xb-uia" firstAttribute="top" secondItem="5UK-Gh-Z0e" secondAttribute="bottom" id="aEa-xf-3Tz"/>
+                            <constraint firstItem="clv-Gs-WcF" firstAttribute="leading" secondItem="qAk-0k-8ma" secondAttribute="leading" id="aXs-iz-ArN"/>
+                            <constraint firstItem="9KC-MW-TBf" firstAttribute="width" secondItem="pQB-Ry-e8D" secondAttribute="width" id="axa-is-CPx"/>
+                            <constraint firstItem="mVc-xb-uia" firstAttribute="height" secondItem="5UK-Gh-Z0e" secondAttribute="height" id="byg-dW-Dd8"/>
+                            <constraint firstItem="ODu-qg-4t5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="c40-af-Pfc"/>
+                            <constraint firstItem="TkY-ta-GiN" firstAttribute="centerX" secondItem="zL8-px-Rnc" secondAttribute="centerX" id="cVg-fJ-NNt"/>
+                            <constraint firstItem="zL8-px-Rnc" firstAttribute="leading" secondItem="qAk-0k-8ma" secondAttribute="trailing" id="cgp-mf-6ec"/>
+                            <constraint firstItem="6nW-ms-gcs" firstAttribute="leading" secondItem="J9t-79-n3F" secondAttribute="leading" id="d3a-Ws-0e9"/>
+                            <constraint firstItem="TkY-ta-GiN" firstAttribute="width" secondItem="zL8-px-Rnc" secondAttribute="width" id="dDt-O5-rJz"/>
+                            <constraint firstItem="zL8-px-Rnc" firstAttribute="height" secondItem="qAk-0k-8ma" secondAttribute="height" id="dfT-xq-JO0"/>
+                            <constraint firstItem="zL8-px-Rnc" firstAttribute="width" secondItem="qAk-0k-8ma" secondAttribute="width" id="efu-xN-tOi"/>
+                            <constraint firstItem="qAk-0k-8ma" firstAttribute="top" secondItem="6nW-ms-gcs" secondAttribute="bottom" id="guZ-IM-Sva"/>
+                            <constraint firstItem="Y9p-QF-37I" firstAttribute="width" secondItem="5UK-Gh-Z0e" secondAttribute="width" id="ly6-A0-2JT"/>
+                            <constraint firstItem="Y9p-QF-37I" firstAttribute="leading" secondItem="5UK-Gh-Z0e" secondAttribute="trailing" id="mKv-Lb-pSW"/>
+                            <constraint firstItem="mVc-xb-uia" firstAttribute="centerX" secondItem="5UK-Gh-Z0e" secondAttribute="centerX" id="nB7-3w-cjr"/>
+                            <constraint firstItem="6nW-ms-gcs" firstAttribute="height" secondItem="J9t-79-n3F" secondAttribute="height" id="ntW-TO-ecs"/>
+                            <constraint firstItem="5UK-Gh-Z0e" firstAttribute="leading" secondItem="zL8-px-Rnc" secondAttribute="trailing" id="ooz-yJ-dfk"/>
+                            <constraint firstItem="6nW-ms-gcs" firstAttribute="width" secondItem="J9t-79-n3F" secondAttribute="width" id="qcB-Kv-WDk"/>
+                            <constraint firstItem="J9t-79-n3F" firstAttribute="leading" secondItem="ODu-qg-4t5" secondAttribute="leading" id="t10-VK-gjo"/>
+                            <constraint firstItem="pQB-Ry-e8D" firstAttribute="height" secondItem="6nW-ms-gcs" secondAttribute="height" id="toL-gk-5wu"/>
+                            <constraint firstItem="qAk-0k-8ma" firstAttribute="width" secondItem="6nW-ms-gcs" secondAttribute="width" id="v5n-xD-hed"/>
+                            <constraint firstItem="J9t-79-n3F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.22" id="vs7-FY-ez8"/>
+                            <constraint firstItem="ODu-qg-4t5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wQc-tZ-wVC"/>
+                            <constraint firstItem="2zU-8D-WMT" firstAttribute="height" secondItem="J9t-79-n3F" secondAttribute="height" id="wmO-qC-h76"/>
+                            <constraint firstItem="2zU-8D-WMT" firstAttribute="leading" secondItem="J9t-79-n3F" secondAttribute="trailing" id="zV3-Zk-ucm"/>
+                            <constraint firstItem="zL8-px-Rnc" firstAttribute="centerY" secondItem="qAk-0k-8ma" secondAttribute="centerY" id="zsL-ax-ICa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="valueLabel" destination="ODu-qg-4t5" id="aC0-5A-4El"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
