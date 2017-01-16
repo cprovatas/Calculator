@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel! { didSet { valueLabel.sizeToFit() }}
     private var previousValue: Int?
     private var previousArith: String?
     private var shouldClearDisplay: Bool = false
