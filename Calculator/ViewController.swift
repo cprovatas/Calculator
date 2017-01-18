@@ -21,19 +21,18 @@ class ViewController: UIViewController {
     
     @IBAction func numOrArithTapped(_ sender: Any) {
         let buttonText = (sender as! UIButton).titleLabel!.text!
+        if buttonText.characters.count > 20 { return }
         if let int = Int(buttonText) {
             if valueLabel.text! == "0" || shouldClearDisplay {
                 valueLabel.text! = ""
                 shouldClearDisplay = false
             }
             valueLabel.text! += "\(int)"
-        }else if previousArith != buttonText {
-            arithTapped(buttonText)
+        }else if !shouldClearDisplay {
+            performArith(buttonText)
+        }else {
+            previousArith = buttonText
         }
-    }
-    
-    private func arithTapped(_ char: String) {
-        performArith(char)
     }
     
     private func performArith(_ prevArith: String? = nil) {
