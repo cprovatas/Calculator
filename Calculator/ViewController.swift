@@ -85,4 +85,11 @@ fileprivate extension String {
     }
 }
 
+class Button : UIButton {
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        layer.borderWidth = 0.25
+        layer.borderColor = UIColor.black.cgColor
+    }
+}
 
